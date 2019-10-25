@@ -1,0 +1,7 @@
+<h3>De acuerdo: {{acuerdo}} , En desacuerdo: {{desacuerdo}}</h3>
+
+<app-urna *ngFor="let votante of votantes"
+[nombreVotante] ='votante'
+(voto) = "conteoVotos($event)"> <!-- En el padre se captura la emisión del evento desde el hijo -->
+
+</app-urna>
